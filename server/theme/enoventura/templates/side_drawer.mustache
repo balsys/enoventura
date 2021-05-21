@@ -1,0 +1,15 @@
+{{> theme_enoventura/side_drawer_toggle }}
+
+<div class="totaraNav">
+  {{#masthead_menu}}
+    {{> totara_core/nav_primary }}
+    {{#subnav_has_items}}{{> totara_core/nav_sub }}{{/subnav_has_items}}
+    {{#js}}
+      require(['theme_enoventura/totaranav'], function(totaraNav) {
+      totaraNav.init(document.querySelector('.totaraNav'));
+      });
+      require(['theme_enoventura/sidedrawer']);
+    {{/js}}
+  {{/masthead_menu}}
+</div>
+
